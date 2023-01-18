@@ -21,14 +21,14 @@ Select your Syscon file to be written - Example: Syscon1.bin
 
 You will have the follow writing options:
 
-Write Entire Chip Excluding Block 1 (Optional)
+* Write Entire Chip Excluding Block 1 (Optional)
 	This writes to the entire chip, excluding the first block - it is safe and takes about 120 seconds.
 	
-Write Entire Chip Including Block 1 & Enable OCD (Optional)
+* Write Entire Chip Including Block 1 & Enable OCD (Optional)
 	This writes to the entire chip, including the first block and also enabled OCD mode. This removes the need to glitch in the future.
 	You should only use this mode for your first write or if your writes are corrupted.
 	
-Confirm Dump After Writing? (Optional)
+* Confirm Dump After Writing? (Optional)
 	After writing it will dump your Syscon and compare against what you have written to confirm it was successful.
 	I recommend using this every time, but it will add extra time to the process.
 	
@@ -47,11 +47,13 @@ If Reader OR Writer is looping CONNECTING... just cancel and start again as your
 Most issues are fixed with restarting the program or actually checking connections!
 
 
-    Reader: 
-    Version 2.5 (7/1/23)
 
-    Writer:
-    Version 1.5 (7/1/23)
+	Reader: 
+	Version 2.6 (15/1/23)
+
+	Writer:
+	Version 1.7 (17/1/23)
+
 
     Archive Password: BwE
 
