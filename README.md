@@ -56,5 +56,13 @@ Most issues are fixed with restarting the program or actually checking connectio
 
 
     Archive Password: BwE
-
-    Credits: DARKNESMONK
+    
+    
+<h3>Credits/Greetz:</h3>
+DarkNESMonk
+<br>Wildcard
+<br>fail0verflow
+<br>JEFF
+  <br>PDJ
+  <br>Hoea
+  <br>Donators & Suppliers of Dumps/Syscons
