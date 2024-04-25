@@ -46,17 +46,6 @@ If Reader OR Writer is looping CONNECTING... just cancel and start again as your
 
 Most issues are fixed with restarting the program or actually checking connections!
 
-
-
-	Reader: 
-	Version 2.6 (15/1/23)
-
-	Writer:
-	Version 1.7 (17/1/23)
-
-
-    Archive Password: BwE
-    
     
 <h3>Credits/Greetz:</h3>
 DarkNESMonk
