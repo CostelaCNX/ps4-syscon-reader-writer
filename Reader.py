@@ -8,21 +8,27 @@ import sys
 import colorama
 import hashlib
 import serial.tools.list_ports
-from colorama import init, Fore, Style
+from colorama import init, Fore, Style, Back
 
 BLOCKSIZE = 1024
 
 colorama.init()
 
-bwe = """
-  _________                               __________                   .___            
- /   _____/__.__. ______ ____  ____   ____\______   \ ____ _____     __| _/___________ 
- \_____  <   |  |/  ___// ___\/  _ \ /    \|       _// __ \\__   \   / __ |/ __ \_  __ \\
- /        \___  |\___ \\\  \__(  <_> )   |  \    |   \  ___/ / _\ \_/ /_/ \  ___/|  | \/
-/_______  / ____/____  >\___  >____/|___|  /____|_  /\___  >____  /\____ |\___  >__|   
-        \/\/         \/     \/           \/       \/     \/     \/      \/    \/     v2.9
-by DARKNESMONK & BwE (www.betterwayelectronics.com.au)
-"""
+def print_banner():
+    print(Fore.BLACK + Back.CYAN + "*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*")
+    print(Fore.BLACK + Back.CYAN + "|" + Fore.WHITE + Back.BLACK + "     ___           __    _  ____________  ___          __      " + Fore.BLACK + Back.CYAN + "|")
+    print(Fore.BLACK + Back.CYAN + "|" + Fore.WHITE + Back.BLACK + "    / _ \___ _____/ /__ / |/ / __/ __/  |/  /__  ___  / /__    " + Fore.BLACK + Back.CYAN + "|")
+    print(Fore.BLACK + Back.CYAN + ":" + Fore.WHITE + Back.BLACK + "   / // / _ `/ __/  '_//    / _/_\ \/ /|_/ / _ \/ _ \/  '_/    " + Fore.BLACK + Back.CYAN + ":")
+    print(Fore.BLACK + Back.CYAN + "." + Fore.WHITE + Back.BLACK + "  /____/\_,_/_/ /_/\_\/_/|_/___/___/_/  /_/\___/_//_/_/\_\     " + Fore.BLACK + Back.CYAN + ".")
+    print(Fore.BLACK + Back.CYAN + ":" + Fore.WHITE + Back.BLACK + "                                                               " + Fore.BLACK + Back.CYAN + ":")
+    print(Fore.BLACK + Back.CYAN + ":" + Fore.WHITE + Back.BLACK + "  /\\_/\\    and BwE Presents....                                " + Fore.BLACK + Back.CYAN + ":")
+    print(Fore.BLACK + Back.CYAN + "|" + Fore.WHITE + Back.BLACK + " ( ~.~ )   "+ Fore.CYAN + "The Original Syscon Reader " + Fore.WHITE + "Version 3.0" + "              " + Fore.BLACK + Back.CYAN + "|")
+    print(Fore.BLACK + Back.CYAN + "|" + Fore.WHITE + Back.BLACK + " (>   <)                                                       " + Fore.BLACK + Back.CYAN + "|")
+    print(Fore.BLACK + Back.CYAN + "*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*" + Back.BLACK + Style.RESET_ALL + "\n")
+
+
+os.system('cls')
+print_banner()
 
 syscon_hashes = {
     "2.26": "263BD07F5B80F64ACA8A107FEE27EE08",
@@ -154,7 +160,7 @@ def main(port):
 		return 0
 
 	os.system('cls')
-	print(Fore.CYAN + bwe + Style.RESET_ALL)
+	print_banner()
 	f = ["syscon1.bin", "syscon2.bin"]
 	for val in f:
 		dump(val)
@@ -195,7 +201,7 @@ def main(port):
 
 	
 if __name__ == '__main__':
-	print(Fore.CYAN + bwe + Style.RESET_ALL)
+	print_banner()
 
 	ports = list(serial.tools.list_ports.comports())
 	auto_ports = []
